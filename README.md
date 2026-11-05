@@ -1,18 +1,29 @@
 # 1주차 과제 – 3D 캐릭터 프로덕트 뷰어
 
-첨부 캐릭터 이미지를 참고해 Three.js로 만든 단일 HTML 3D 프로덕트 뷰어입니다.
+첨부 캐릭터 이미지를 참고해 Three.js로 만든 3D 프로덕트 뷰어입니다.
+
+- 데모: https://kyeong-hee.github.io/study_w1_v1/bunny-viewer.html
+
+## 파일 구조
+
+```
+1주차/
+├─ bunny-viewer.html   # 마크업 (캔버스, 우측 패널, Three.js importmap)
+├─ css/
+│  └─ style.css        # 레이아웃·패널·버튼 스타일, 모바일 반응형
+└─ js/
+   └─ main.js          # Three.js 장면, 캐릭터 모델링, 재질·모션·하트·컨택트 섀도우
+```
 
 ## 실행 방법
 
-`bunny-viewer.html`을 브라우저로 열면 됩니다. Three.js를 CDN(jsDelivr, three@0.170.0)에서 불러오므로 인터넷 연결이 필요합니다.
+JS를 별도 파일(ES 모듈)로 불러오기 때문에 `bunny-viewer.html`을 더블클릭(`file://`)으로 열면 동작하지 않습니다. 로컬 서버로 실행하거나 위 데모 링크로 확인하세요. Three.js는 CDN(jsDelivr, three@0.170.0)에서 불러오므로 인터넷 연결이 필요합니다.
 
-> 일부 브라우저는 `file://` 경로에서 ES 모듈 로딩을 막을 수 있습니다. 이 경우 로컬 서버로 실행하세요.
->
-> ```bash
-> py -m http.server 5178
-> ```
->
-> 이후 `http://localhost:5178/bunny-viewer.html` 접속
+```bash
+py -m http.server 5178
+```
+
+이후 `http://localhost:5178/bunny-viewer.html` 접속 (VS Code Live Server 사용도 가능)
 
 ## 주요 기능
 
